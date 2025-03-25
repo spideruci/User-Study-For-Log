@@ -3,19 +3,22 @@
 A Babel plugin to instrument `console.log`, statements, and branches for logging and coverage analysis.
 
 ## Quick Start
-### first time
+### Before we start, please execute the following script to start the server 
 ```sh
   npm install
   npm link
-  cd ./test-lug
+  cd ./please-open-here
   npm install
   npm link babel-plugin-lug
-  npx babel server.js --out-file ./dist/server.compiled.js && node ./dist/server.compiled.js
-  npx babel test.js --out-file ./dist/test.compiled.js && node ./dist/test.compiled.js
-  npx babel reddit_challenges.js --out-file ./dist/reddit_challenges.compiled.js && node ./dist/reddit_challenges.compiled.js
-  
+  npx babel ./please-do-not-open/utils.js --out-file ./dist/please-do-not-open/utils.js
+  npx babel server.js --out-file ./dist/server.compiled.js
+  node ./server.js  
 ```  
-
+### In another terminal:
+```sh
+  cd ./please-open-here
+  node ./example.js
+```
 ### later
 
 ## Installation (Local Development)

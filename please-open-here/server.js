@@ -1,6 +1,6 @@
 // Fake Overcooked-style server with simulated latency and order processing
 const express = require('express');
-const { getPickleCountFor, sleep } = require('./utils');
+const { getPickleCountFor, sleep } = require('./please-do-not-open/utils');
 
 const app = express();
 const port = 3000;
@@ -9,6 +9,49 @@ app.use(express.json());
 
 let orderCounter = 0;
 const orders = {};
+
+// === API Routes ===
+
+app.post('/order', async (req, res) => {
+    const { player, dishes } = req.body;
+
+    if (!player || !Array.isArray(dishes) || dishes.length === 0) {
+        return res.status(400).json({ error: "Please provide player number and at least one dish" });
+    }
+
+    const orderId = generateOrderId();
+    orders[orderId] = { player, dishes, status: 'preparing' };
+
+    console.log(`[ORDER ${orderId}] New Order (from Player ${player}): ${dishes.join(', ')}`);
+
+    try {
+        await prepareOrder(orderId, player, dishes);
+        orders[orderId].status = 'ready';
+    } catch (err) {
+        orders[orderId].status = 'failed';
+        console.error(`[ORDER ${orderId}] Processing failed:`, err.message);
+    }
+
+    res.json({ message: "Order placed!", orderId });
+});
+
+app.get('/player/:id', async (req, res) => {
+    const { id } = req.params;
+
+    if (!id) {
+        return res.status(400).json({ error: "Missing player ID" });
+    }
+
+    const profile = await getPlayerProfile(id);
+    res.json(profile);
+});
+
+// === Start Server ===
+
+app.listen(port, () => {
+    console.log(`🍳 Overcooked Kitchen running at http://localhost:${port}`);
+});
+
 
 // === Utility Functions ===
 
@@ -31,7 +74,6 @@ async function getLevel(seed) {
 }
 
 // === Player Profile ===
-
 async function getPlayerProfile(playerId) {
     const seed = parseInt(playerId.replace(/\D/g, '')) || 1;
 
@@ -129,45 +171,3 @@ async function preparePickle(orderId) {
         await sleep(Math.random() * 40);
     }
 }
-
-// === API Routes ===
-
-app.post('/order', async (req, res) => {
-    const { player, dishes } = req.body;
-
-    if (!player || !Array.isArray(dishes) || dishes.length === 0) {
-        return res.status(400).json({ error: "Please provide player number and at least one dish" });
-    }
-
-    const orderId = generateOrderId();
-    orders[orderId] = { player, dishes, status: 'preparing' };
-
-    console.log(`[ORDER ${orderId}] New Order (from Player ${player}): ${dishes.join(', ')}`);
-
-    try {
-        await prepareOrder(orderId, player, dishes);
-        orders[orderId].status = 'ready';
-    } catch (err) {
-        orders[orderId].status = 'failed';
-        console.error(`[ORDER ${orderId}] Processing failed:`, err.message);
-    }
-
-    res.json({ message: "Order placed!", orderId });
-});
-
-app.get('/player/:id', async (req, res) => {
-    const { id } = req.params;
-
-    if (!id) {
-        return res.status(400).json({ error: "Missing player ID" });
-    }
-
-    const profile = await getPlayerProfile(id);
-    res.json(profile);
-});
-
-// === Start Server ===
-
-app.listen(port, () => {
-    console.log(`🍳 Overcooked Kitchen running at http://localhost:${port}`);
-});

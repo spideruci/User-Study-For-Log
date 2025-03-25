@@ -17,11 +17,6 @@
   },
   "dependencies": {
     "axios": "^1.8.1",
-    "bcrypt": "^5.1.1",
-    "express": "^4.21.2",
-    "i": "^0.3.7",
-    "npm": "^11.1.0",
-    "react-json-view": "^1.21.3",
-    "uuid": "^11.1.0"
+    "express": "^4.21.2"
   }
 }
