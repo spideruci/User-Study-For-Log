@@ -4,14 +4,13 @@ const SERVER_URL = 'http://localhost:3000/order';
 const PLAYER_API_URL = 'http://localhost:3000/player';
 const TOTAL_ORDERS = 20; // Change this as needed
 
-// Deterministically assign dishes based on order index
 function getDishesFor(index) {
     if ((index + 1) % 3 === 0) {
-        return ['burger', 'salad']; // every 3rd order gets both
+        return ['burger', 'salad']; 
     } else if ((index + 1) % 2 === 0) {
-        return ['burger']; // even index gets burger
+        return ['burger'];
     } else {
-        return ['salad']; // odd index gets salad
+        return ['salad']; 
     }
 }
 
