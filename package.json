@@ -1,0 +1,20 @@
+{
+  "name": "babel-plugin-lug",
+  "version": "1.0.0",
+  "description": "A Babel plugin to instrument console.log, statements, and branches for logging and coverage analysis.",
+  "main": "src/index.js",
+  "keywords": [
+    "babel-plugin",
+    "console.log",
+    "instrumentation",
+    "coverage",
+    "logging"
+  ],
+  "author": "Yi-Hung Chou",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.26.8",
+    "@babel/generator": "^7.26.8",
+    "babel-cli": "^6.26.0"
+  }
+}
