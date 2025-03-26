@@ -38,29 +38,22 @@ please-open-here/
 
 Please execute the following commands to install dependencies and compile the server.
 
-### 1. Install dependencies and link plugin
 
-```sh
-npm install
-npm link
-```
-
-### 2. Set up the client folder
+### 1. Set up the client folder
 
 ```sh
 cd ./please-open-here
 npm install
-npm link babel-plugin-lug
 ```
 
-### 3. Compile necessary files
+### 2. Compile necessary files
 
 ```sh
 npx babel ./please-do-not-open/utils.js --out-file ./dist/please-do-not-open/utils.js
 npx babel server.js --out-file ./dist/server.compiled.js
 ```
 
-### 4. Start the server
+### 3. Start the server
 
 ```sh
 node ./server.js
@@ -94,10 +87,6 @@ You are not required to interact directly with these endpoints, but here’s wha
 ### `POST /order`
 
 Submit an order with player ID and dish names.
-
-### `GET /player/:id`
-
-Fetches a player profile with avatar, name, level, and completed order count.
 
 ---
 

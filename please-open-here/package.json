@@ -13,7 +13,8 @@
     "@babel/cli": "^7.26.4",
     "@babel/generator": "^7.26.8",
     "@babel/preset-env": "^7.26.8",
-    "@babel/preset-typescript": "^7.26.0"
+    "@babel/preset-typescript": "^7.26.0",
+    "babel-plugin-lug": "github:spideruci/User-Study-For-Log"
   },
   "dependencies": {
     "axios": "^1.8.1",

@@ -22,8 +22,6 @@ app.post('/order', async (req, res) => {
     const orderId = generateOrderId();
     orders[orderId] = { player, dishes, status: 'preparing' };
 
-    console.log(`[ORDER ${orderId}] New Order (from Player ${player}): ${dishes.join(', ')}`);
-
     try {
         await prepareOrder(orderId, player, dishes);
         orders[orderId].status = 'ready';
