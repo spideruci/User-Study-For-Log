@@ -8,7 +8,7 @@
 
 ## 🎯 Goal
 
-Determine **which player’s burger was finished first** between **Player486** and **Player489**, and report the **name and level** of each player.
+Determine **which player’s burger was finished first** between **Player495** and **Player493**, and report the **name and level** of each player.
 
 ---
 
@@ -38,8 +38,8 @@ Determine **which player’s burger was finished first** between **Player486** a
 
 1. Identify **which player’s burger was completed first**  
 2. Report the **name and level** of:
-   - Player486  
-   - Player489
+   - Player495
+   - Player493
 
 Use the available logs and any strategies that help you understand the timing and preparation flow for each order.
 

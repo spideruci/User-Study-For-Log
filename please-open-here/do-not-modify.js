@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const SERVER_URL = 'http://localhost:3000/order';
 const PLAYER_API_URL = 'http://localhost:3000/player';
-const TOTAL_ORDERS = 20; // Change this as needed
+const TOTAL_ORDERS = 10; // Change this as needed
 
 function getDishesFor(index) {
     if ((index + 1) % 3 === 0) {
