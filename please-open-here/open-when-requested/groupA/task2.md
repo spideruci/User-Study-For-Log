@@ -18,7 +18,10 @@ Determine **which player’s burger was finished first** between **Player486** a
 ✅ You **can**:
 - Interact with the tool to explore, filter, or reorganize logs  
 - Optionally modify the code to assist your investigation (e.g., add timestamps, print markers, etc.)
-
+  **Make sure you are in the right directory**
+  ```
+  cd ./please-open-here
+  ```
   **Please execute the following script when you modify server.js**
 
   ```

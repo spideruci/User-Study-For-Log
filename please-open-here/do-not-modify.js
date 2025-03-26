@@ -21,16 +21,10 @@ async function sendOrder(orderIndex) {
     console.log(`📝 Submitting Order #${orderIndex + 1}: ${playerId} orders ${dishes.join(', ')}`);
 
     try {
-        const [playerRes, orderRes] = await Promise.all([
-            axios.get(`${PLAYER_API_URL}/${playerId}`),
-            axios.post(SERVER_URL, {
-                player: playerId,
-                dishes: dishes
-            })
-        ]);
-
-        console.log(`👤 Player Info for ${playerId}:`, playerRes.data);
-        console.log(`✅ Order placed successfully: Order ID = ${orderRes.data.orderId}`);
+        await axios.post(SERVER_URL, {
+            player: playerId,
+            dishes: dishes
+        })
     } catch (error) {
         console.error(`❌ Failed to handle order for ${playerId}:`, error.response?.data || error.message);
     }

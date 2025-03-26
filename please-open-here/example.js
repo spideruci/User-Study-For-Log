@@ -7,7 +7,6 @@ async function invokeAPIs() {
   try {
     const playerId = 'player001';
 
-    // 1. Call POST /order
     const orderResponse = await axios.post(`${baseURL}/order`, {
       player: playerId,
       orderId: 20,
@@ -15,9 +14,6 @@ async function invokeAPIs() {
     });
     console.log('Order Response:', orderResponse.data);
 
-    // 2. Call GET /player/:id
-    const profileResponse = await axios.get(`${baseURL}/player/${playerId}`);
-    console.log('Player Profile:', profileResponse.data);
 
   } catch (error) {
     console.error('Error during API calls:', error.message);

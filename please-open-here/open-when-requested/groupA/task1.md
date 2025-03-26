@@ -9,18 +9,22 @@
 
 ## 🎯 Goal
 
-Identify all players **whose level is greater than 40**, and determine whether **they had 2 pickles** in their burger order.
+Identify all players who have **at least 2 pickles** in their burger order.
 
 ---
 
 ## 🛠 What You Can Do
 
-✅ You **do not** need to send any new requests — all necessary requests have been pre-submitted.  
+✅ You **do not** need to send any new requests — logs have already been generated.  
 ✅ You **can**:
-- Interact with the tool to explore, filter, or inspect the logs  
-- Optionally modify the code to help answer the question (e.g., add logs or simplify logic).
+- Interact with the tool to explore, filter, or reorganize logs  
+- Optionally modify the code to assist your investigation (e.g., add timestamps, print markers, etc.)
 
-  **Please execute the following script when you modify server.js**
+  **Make sure you are in the right directory**
+  ```
+  cd ./please-open-here
+  ```
+  **Please execute the following script when you modify server.js** 
   ```
   node ./server.js
 
@@ -31,9 +35,6 @@ Identify all players **whose level is greater than 40**, and determine whether *
 
 ## 📋 Your Task
 
-1. **List the names** of all players whose level is **above 47**  
-2. For **each player**, determine whether their **burger contained at least 2 pickles** (if they didn't order burger, simply ignore it)
+1. List all the playerId for the players whose burgers contains at least 2 pickles.
 
-Use any combination of log inspection or code instrumentation to complete the task.
-
-
+Use the available logs and any strategies that help you understand the timing and preparation flow for each order.
