@@ -15,10 +15,9 @@ Identify all players who have **at least 2 pickles** in their burger order.
 
 ## 🛠 What You Can Do
 
-✅ You **do not** need to send any new requests — logs have already been generated.  
+✅ "You do not need to send any new API requests yourself. We’ve already set up a script that sends out sample requests automatically — it’s called do-not-modify.js."
 ✅ You **can**:
-- Interact with the tool to explore, filter, or reorganize logs  
-- Optionally modify the code to assist your investigation (e.g., add timestamps, print markers, etc.)
+- Modify the code to assist your investigation (e.g., add timestamps, print markers, etc.) and rerun the code if you need. (make sure to run node ./do-not-modify.js as well)
 
   **Make sure you are in the right directory**
   ```

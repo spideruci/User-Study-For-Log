@@ -58,16 +58,11 @@ async function prepareOrder(orderId, player, dishes) {
 }
 
 async function prepareDish(dish, orderId) {
-    const recipes = {
-        burger: prepareBurger,
-        salad: prepareSalad
-    };
-
-    if (!recipes[dish]) {
-        throw new Error(`Recipe for ${dish} not found`);
+    if (dish === "burger") {
+        await prepareBurger(orderId);
+    } else {
+        await prepareSalad(orderId);
     }
-
-    await recipes[dish](orderId);
 }
 
 // === Dish Components ===
