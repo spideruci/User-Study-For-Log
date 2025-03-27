@@ -27,7 +27,11 @@ Determine **which player’s burger was finished first** between **Player495** a
   ```
   npx babel server.js --out-file ./dist/server.compiled.js
   node ./dist/server.compiled.js
+  
+  or 
 
+  npm run start-second-task
+  
   // open other terminal and run
   node ./do-not-modify.js 
   ```

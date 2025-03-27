@@ -43,17 +43,10 @@ Please execute the following commands to install dependencies and compile the se
 
 ```sh
 cd ./please-open-here
-npm install
+npm run setup
 ```
 
-### 2. Compile necessary files
-
-```sh
-npx babel ./please-do-not-open/utils.js --out-file ./dist/please-do-not-open/utils.js
-npx babel server.js --out-file ./dist/server.compiled.js
-```
-
-### 3. Start the server
+### 2. Start the server
 
 ```sh
 node ./server.js
