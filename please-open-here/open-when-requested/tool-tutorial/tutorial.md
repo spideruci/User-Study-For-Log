@@ -49,78 +49,28 @@ This guide will take approximately **10 minutes**.
 
 ---
 
-## ✅ Step 1: Compile the Server Code
+## Step 1: Configurate Logiverse (or currently CO DEBUGGER: SIDEBAR VIEW)
+Please search in vscode marketplace for Logiverse and click install. After the installation, please check the sidebar, you should be able to see a new icon.
+
+![alt text](image.png)
+
+Please drag the icon and place it side-by-side with terminal for the better user experience.
+
+## Step 2: Run the example1.js and example2.js
 
 Open **Terminal 1**, navigate to the `please-open-here`, and run:
 
 ```bash
-cd ./please-open-here
-npx babel server.js --out-file ./dist/server.compiled.js
+npm run example1
 ```
 
-This compiles the modern JavaScript in `server.js` into a Node-compatible version.
-
----
-
-## ✅ Step 2: Start the Server
-
-Still in **Terminal 1**, start the compiled server:
+or 
 
 ```bash
-node ./dist/server.compiled.js
+npm run example2
 ```
 
-You should see:
 
-```
-🍳 Overcooked Kitchen running at http://localhost:3000
-```
-
-The server is now ready to accept requests and print logs in the terminal.
+This compiles and runs the example1.js in playground folder into a Logiverse-compatible version. Please examine the code in example1 or example 2 and observe the output in Logiverse and drag and drop the interface to learn its feature. You could refer back to the youtube video for all the features. Once you are ready, please tell the moderators for the next task.
 
 ---
-
-## ✅ Step 3: Trigger Example Logs
-
-Open **Terminal 2** and run:
-
-```bash
-node ./example.js
-```
-
-This script sends several test requests to the server, including:
-- `GET /player/:id` – to fetch player profiles
-- `POST /order` – to simulate food orders
-
-These requests will generate logs that reflect asynchronous food preparation processes.
-
----
-
-## ✅ Step 4: Explore the Logs in the Prototype Tool
-
-Now open the prototype tool
-
-Use it to:
-- 📂 Group logs by request or function
-- 🔍 Search for specific players or ingredients
-- ⏱️ Identify which parts of the system run concurrently
-- 🧠 Trace async logic like `preparePickle()`, `grillPatty()`, or `getPlayerProfile()`
-
-Focus questions:
-- Can you follow the full lifecycle of an order?
-- Which logs relate to each other?
-- How does asynchrony show up visually?
----
-
-## 🎉 You're Ready!
-
-You've now seen how logs are generated, organized, and explored in the prototype tool.
-
-You're ready to begin the assigned tasks. If you’d like to re-run the example or modify code/logs, feel free to do so during the session.
-
----
-
-🛠️ Need help? Let your facilitator know at any time.
-
----
-
