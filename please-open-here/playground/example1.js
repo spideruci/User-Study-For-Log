@@ -1,19 +1,19 @@
-async function taskOne() {
-    console.log("start task one");
-    await taskTwo();
-    console.log("end task one");
+async function first() {
+    console.log("start first function");
+    await first();
+    console.log("end first function");
 }
 
-async function taskTwo() {
-    console.log("start task two");
-    await taskThree();
-    console.log("finish task two");
+async function second() {
+    console.log("start second function");
+    await third();
+    console.log("finish second function");
 }
 
-async function taskThree() {
-    console.log("start task three");
+async function third() {
+    console.log("start third function");
     await sleep(100);
-    console.log("finish task three");
+    console.log("finish third function");
 }
 
 async function sleep(ms) {
@@ -22,4 +22,4 @@ async function sleep(ms) {
   });
 }
 
-taskOne();
+first();

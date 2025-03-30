@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "npm install && npm run compile",
-    "compile": "babel ./please-do-not-open/utils.js --out-file dist/utils.js && babel ./server.js --out-file ./dist/server.compiled.js",
+    "compile": "babel ./please-do-not-open/utils.js --out-file dist/please-do-not-open/utils.js && babel ./server.js --out-file ./dist/server.compiled.js",
     "start-first-task": "node ./server.js",
     "start-second-task": "npm run compile && node ./dist/server.compiled.js",
     "send-requests": "node ./do-not-modify.js",
     "example1": "babel ./playground/example1.js --out-file ./dist/playground1.compiled.js && node ./dist/playground1.compiled.js",
-    "example2": "babel ./playground/example2.js --out-file ./dist/playground2.compiled.js && node ./dist/playground2.compiled.js"
+    "example2": "babel ./playground/example2.js --out-file ./dist/playground2.compiled.js && node ./dist/playground2.compiled.js",
+    "frontend-example": "babel ./playground/frontend.js --out-file ./dist/playground/frontend.js && cp ./playground/index.html ./dist/playground/index.html"
   },
   "keywords": [],
   "author": "",

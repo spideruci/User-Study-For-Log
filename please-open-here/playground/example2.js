@@ -1,23 +1,21 @@
 
 let shareVal = 0;
 
-async function taskOne() {
-    console.log("start task one");
-    await taskTwo();
-    await taskThree();
-    console.log("end task one");
+async function firstFuncWithLog() {
+    console.log("start first function");
+    await secondFunc();
+    console.log("end first function");
 
 }
 
-async function taskTwo() {
-    shareVal++;
-    console.log(shareVal);
-    await sleep(100);
+async function secondFunc() {
+    await thirdFuncWithLog();
 }
-async function taskThree() {
-    shareVal++;
-    console.log(shareVal);
+
+async function thirdFuncWithLog() {
+    console.log("start third function");
     await sleep(100);
+    console.log("end third function");
 }
 
 async function sleep(ms) {
@@ -27,5 +25,5 @@ async function sleep(ms) {
 }
 
 for (let i = 0; i < 5; i ++) {
-    taskOne();
+    firstFuncWithLog();
 }
