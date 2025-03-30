@@ -10,16 +10,6 @@ module.exports = function ({ types: t }) {
         // ----------------------------------------------------------------------------
         // 1) Insert performance import
         // ----------------------------------------------------------------------------
-        const performanceImport = t.importDeclaration(
-          [
-            t.importSpecifier(
-              t.identifier("performance"),
-              t.identifier("performance")
-            )
-          ],
-          t.stringLiteral("perf_hooks")
-        );
-        path.unshiftContainer("body", performanceImport);
 
         // ----------------------------------------------------------------------------
         // 2) Insert global programUUID
