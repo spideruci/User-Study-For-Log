@@ -30,7 +30,7 @@ Determine **which player’s burger was finished first** between **Player495** a
   
   or 
 
-  npm run start-second-task
+  npm run start-compiled-server
   
   // open other terminal and run
   node ./do-not-modify.js 

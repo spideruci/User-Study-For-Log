@@ -1,5 +1,6 @@
 
-# 🧠 Task 2: Log Comparison
+
+# 🧠 Task 1: Log Investigation
 
 ⏱ **Time Limit:** 10 minutes  
 🧾 You will be reminded at  **1 minute** remaining. The task will be **cut off at 10 minutes**.
@@ -8,34 +9,30 @@
 
 ## 🎯 Goal
 
-Determine **which player’s burger was finished first** between **Player486** and **Player489**, and report the **name and level** of each player.
 
+Determine **which player’s burger was finished first** between **Player495** and **Player493**
 ---
 
 ## 🛠 What You Can Do
 
-✅ You **do not** need to send any new requests — logs have already been generated.  
+✅ "You do not need to send any new API requests yourself. We’ve already set up a script that sends out sample requests automatically — it’s called do-not-modify.js."
 ✅ You **can**:
-- Interact with the tool to explore, filter, or reorganize logs  
-- Optionally modify the code to assist your investigation (e.g., add timestamps, print markers, etc.).
+- Modify the code to assist your investigation (e.g., add timestamps, print markers, etc.) and rerun the code if you need. (make sure to run node ./do-not-modify.js as well)
 
-  **Please execute the following script when you modify server.js**
+  **Make sure you are in the right directory**
   ```
-  node ./server.js
-
+  cd ./please-open-here
+  ```
+  **Please execute the following script when you modify server.js** 
+  ```
+  npm run start-server
   // open other terminal and run
   node ./do-not-modify.js 
   ```
-
 ---
 
 ## 📋 Your Task
 
 1. Identify **which player’s burger was completed first**  
-2. Report the **name and level** of:
-   - Player486  
-   - Player489
 
 Use the available logs and any strategies that help you understand the timing and preparation flow for each order.
-
-

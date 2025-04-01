@@ -25,7 +25,7 @@ Identify all players who have **at least 2 pickles** in their burger order.
   ```
   **Please execute the following script when you modify server.js** 
   ```
-  npm run start-first-task
+  npm run start-server
   // open other terminal and run
   node ./do-not-modify.js 
   ```
