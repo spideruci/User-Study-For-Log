@@ -8,7 +8,7 @@
 
 ## 🎯 Goal
 
-Determine **which player’s burger was finished first** between **Player495** and **Player493**
+Determine whether Player495's salad or Player493's burger is finished first.
 
 ---
 
@@ -40,7 +40,7 @@ Determine **which player’s burger was finished first** between **Player495** a
 
 ## 📋 Your Task
 
-1. Identify **which player’s burger was completed first**  
+1. Determine whether Player495's salad or Player493's burger is finished first.
 
 Use the available logs and any strategies that help you understand the timing and preparation flow for each order.
 
